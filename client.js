@@ -15,7 +15,14 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    conn.write("Name: Ava");
+    setTimeout(() => {
+      conn.write("Move: right")}, 300);
+      setTimeout(() => {
+        conn.write("Move: up")}, 600);
+        setTimeout(() => {
+          conn.write("Move: up")}, 900);
+          setTimeout(() => {
+            conn.write("Name: Ava")}, 1200);
   });
   
   return conn;
